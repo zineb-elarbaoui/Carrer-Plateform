@@ -4,7 +4,15 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
-import { extractedSkills } from "@/lib/mock-data";
+
+// Inline data — mock-data file removed
+const extractedSkills = [
+  { name: "Python", category: "Programming", level: 80 },
+  { name: "SQL", category: "Database", level: 70 },
+  { name: "Machine Learning", category: "AI/ML", level: 60 },
+  { name: "Docker", category: "DevOps", level: 50 },
+  { name: "React", category: "Frontend", level: 65 },
+];
 
 export const Route = createFileRoute("/_app/progress")({ component: SkillProgress });
 
@@ -57,5 +65,7 @@ function SkillProgress() {
         </div>
       </main>
     </>
+  );
+}
   );
 }
